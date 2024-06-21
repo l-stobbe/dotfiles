@@ -28,8 +28,16 @@
 (scroll-bar-mode -1)
 (electric-pair-mode 1)
 
+(use-package doom-themes)
+(use-package doom-modeline)
+(use-package helpful)
+(use-package which-key)
 (use-package magit)
 (use-package pdf-tools)
+(use-package ef-themes)
+
+(helpful-mode 1)
+
 
   ;; Enable rich annotations using the Marginalia package
 (use-package marginalia
