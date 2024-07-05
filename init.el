@@ -27,8 +27,7 @@
 (menu-bar-mode -1)
 (scroll-bar-mode -1)
 (electric-pair-mode 1)
-(doom-modeline-mode 1)
-(which-key-mode)
+
 
 
 (use-package doom-themes)
