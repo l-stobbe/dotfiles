@@ -1,0 +1,55 @@
+;; -*- mode: emacs-lisp; lexical-binding:t; coding: utf-8-emacs; -*-
+;; --------------------------------------------------------------------------
+;; Desktop File for Emacs
+;; --------------------------------------------------------------------------
+;; Created Tue Jul 16 01:14:09 2024
+;; Desktop file format version 208
+;; Emacs version 29.4
+
+;; Global section:
+(setq desktop-saved-frameset [frameset 1 (26261 62353 901151 178000) (desktop . "208") "geist@machina" nil nil ((((minibuffer . t) (undecorated) (override-redirect) (font . "-ADBO-Source Code Pro-regular-normal-normal-*-13-*-*-*-m-0-iso10646-1") (border-width . 0) (internal-border-width . 0) (child-frame-border-width) (right-divider-width . 0) (bottom-divider-width . 0) (vertical-scroll-bars) (horizontal-scroll-bars) (foreground-color . "#4f4073") (background-color . "#fff2f3") (mouse-color . "black") (border-color . "black") (screen-gamma) (line-spacing) (left-fringe . 8) (right-fringe . 8) (no-special-glyphs) (scroll-bar-foreground) (scroll-bar-background) (menu-bar-lines . 0) (tab-bar-lines . 0) (tool-bar-lines . 0) (title) (wait-for-wm . t) (tool-bar-position . top) (inhibit-double-buffering) (icon-type . t) (auto-raise) (auto-lower) (cursor-type . box) (scroll-bar-width . 16) (scroll-bar-height . 16) (alpha) (alpha-background) (no-focus-on-map) (no-accept-focus) (fullscreen) (visibility . t) (use-frame-synchronization) (skip-taskbar) (z-group) (environment "LC_NUMERIC=pt_BR.UTF-8" "MAIL=/var/spool/mail/geist" "DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus" "GDMSESSION=i3" "PATH=/home/geist/.guix-profile/bin:/home/geist/.config/guix/current/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl" "BROWSER=firefox" "XDG_DATA_DIRS=/usr/local/share/:/usr/share/" "GTK3_MODULES=xapp-gtk3-module" "LC_TIME=pt_BR.UTF-8" "DEBUGINFOD_URLS=https://debuginfod.archlinux.org " "XDG_RUNTIME_DIR=/run/user/1000" "XDG_STATE_HOME=/home/geist/.local/state" "XDG_SESSION_ID=2" "XDG_VTNR=7" "LC_MEASUREMENT=pt_BR.UTF-8" "LC_TELEPHONE=pt_BR.UTF-8" "GUIX_LOCPATH=/home/geist/.guix-profile/lib/locale" "SHLVL=0" "DISPLAY=:0" "USER=geist" "LC_IDENTIFICATION=pt_BR.UTF-8" "XDG_SESSION_CLASS=user" "INFOPATH=/home/geist/.config/guix/current/share/info:/home/geist/.guix-profile/share/info:" "XDG_CACHE_HOME=/home/geist/.cache" "GUILE_LOAD_COMPILED_PATH=/home/geist/.config/guix/current/lib/guile/3.0/site-ccache" "XDG_SEAT_PATH=/org/freedesktop/DisplayManager/Seat0" "XDG_CURRENT_DESKTOP=i3" "LANG=pt_BR.UTF-8" "LC_PAPER=pt_BR.UTF-8" "HOME=/home/geist" "MOTD_SHOWN=pam" "XDG_GREETER_DATA_DIR=/var/lib/lightdm-data/geist" "DESKTOP_STARTUP_ID=rofi/sh -c \"if [ -n \\\"\\$*\\\" ]; then exec |usr|bin|emacsclient --alternate-editor= --display=\\\"\\$DISPLAY\\\" \\\"\\$@\\\"; else exec emacsclient --alternate-editor= --create-frame; fi\" sh/1286311-0-machina_TIME36095151" "XAUTHORITY=/home/geist/.Xauthority" "GUILE_LOAD_PATH=/home/geist/.config/guix/current/share/guile/site/3.0" "XDG_SESSION_TYPE=x11" "XDG_SESSION_DESKTOP=i3" "LOGNAME=geist" "PWD=/home/geist" "XDG_SEAT=seat0" "GTK_MODULES=canberra-gtk-module" "EDITOR=nano" "LC_MONETARY=pt_BR.UTF-8" "DESKTOP_SESSION=i3" "XCURSOR_PATH=/usr/local/share/icons:/usr/share/icons" "XDG_CONFIG_HOME=/home/geist/.config" "XDG_DATA_HOME=/home/geist/.local/share" "LC_NAME=pt_BR.UTF-8" "LC_ADDRESS=pt_BR.UTF-8" "I3SOCK=/run/user/1000/i3/ipc-socket.787" "XDG_SESSION_PATH=/org/freedesktop/DisplayManager/Session0" "XDG_CONFIG_DIRS=/etc/xdg" "SHELL=/bin/bash") (display-type . color) (background-mode . light) (cursor-color . "#cf0090") (font-parameter) (sticky) (shaded) (dnd-root-window-position) (last-focus-update) (frameset--id . "6E67-761E-0324-758C") (frameset--mini t . t) (height . 60) (width . 116) (modeline . t) (unsplittable) (left . 963) (top . 9) (icon-name) (display . ":0") (explicit-name)) ((min-height . 4) (min-width . 10) (min-height-ignore . 2) (min-width-ignore . 4) (min-height-safe . 1) (min-width-safe . 2) (min-pixel-height . 68) (min-pixel-width . 80) (min-pixel-height-ignore . 34) (min-pixel-width-ignore . 32) (min-pixel-height-safe . 17) (min-pixel-width-safe . 16)) leaf (pixel-width . 946) (pixel-height . 1019) (total-width . 118) (total-height . 59) (normal-height . 1.0) (normal-width . 1.0) (buffer "*scratch*" (selected . t) (hscroll . 0) (fringes 8 8 nil nil) (margins nil) (scroll-bars nil 0 t nil 0 t nil) (vscroll . 0) (dedicated) (point . 146) (start . 1)) (prev-buffers ("*Ibuffer*" 1 1))) (((minibuffer . t) (display-type . mono) (background-mode . dark) (scroll-bar-foreground) (scroll-bar-background) (cursor-color . "white") (tool-bar-lines . 0) (menu-bar-lines . 0) (vertical-scroll-bars) (foreground-color . "unspecified-fg") (background-color . "unspecified-bg") (font . "tty") (height . 25) (width . 80) (modeline . t) (unsplittable) (tab-bar-lines . 0) (frameset--id . "DB6A-5230-7EE3-3536") (frameset--mini t)) ((min-height . 4) (min-width . 10) (min-height-ignore . 2) (min-width-ignore . 2) (min-height-safe . 1) (min-width-safe . 2) (min-pixel-height . 4) (min-pixel-width . 10) (min-pixel-height-ignore . 2) (min-pixel-width-ignore . 2) (min-pixel-height-safe . 1) (min-pixel-width-safe . 2)) leaf (pixel-width . 80) (pixel-height . 24) (total-width . 80) (total-height . 24) (normal-height . 1.0) (normal-width . 1.0) (buffer "*Ibuffer*" (selected) (hscroll . 0) (fringes 0 0 nil nil) (margins nil) (scroll-bars nil 0 t nil 0 t nil) (vscroll . 0) (dedicated) (point . 1) (start . 1))))])
+(setq desktop-missing-file-warning nil)
+(setq tags-file-name nil)
+(setq tags-table-list nil)
+(setq search-ring nil)
+(setq regexp-search-ring nil)
+(setq register-alist nil)
+(setq file-name-history '("~/.emacs.d/" "~/.config/" "~/.config/guix/channels.scm" "~/.bashrc" "/usr/share/bash-completion/completions/pil" "/usr/share/bash-completion/" "/usr/share/" "/usr/bin/picolisp" "/usr/" "~/picolino.l" "~/.bashrc" "~/picolino.l" "~/.bashrc" "~/Downloads/" "~/Downloads/bug-bounty-bootcamp.pdf" "~/Downloads/Vickie Li - Bug Bounty Bootcamp_ The Guide to Finding and Reporting Web Vulnerabilities-No Starch Press (2021).pdf" "~/Downloads/" "~/pyhazing.py" "~/xss.scm" "~/picolino.l" "~/guilelile.scm" "~/.chez-geiser.scm" "~/picolino.l" "~/.pil/editor" "~/.pil/" "~/pyttack.py" "~/.emacs.d/init.el" "~/"))
+
+;; Buffer section -- buffers listed in same order as in buffer list:
+(desktop-create-buffer 208
+  "/home/geist/picolino.l"
+  "picolino.l"
+  'plisp-mode
+  '(font-lock-mode corfu-mode)
+  1
+  '(1 nil)
+  nil
+  nil
+  '((buffer-display-time 26261 62266 294539 595000))
+  '((mark-ring (1 1 1 1 1 1))))
+
+(desktop-create-buffer 208
+  nil
+  "guix"
+  'dired-mode
+  '(font-lock-mode corfu-mode)
+  289
+  '(172 nil)
+  t
+  '("/home/geist/.config/guix/")
+  '((buffer-display-time 26261 62266 294539 420000))
+  '((mark-ring (289))))
+
+(desktop-create-buffer 208
+  nil
+  ".config"
+  'dired-mode
+  '(font-lock-mode corfu-mode)
+  684
+  '(nil nil)
+  t
+  '("/home/geist/.config/")
+  '((buffer-display-time 26261 52181 901936 611000))
+  '((mark-ring nil)))
+
