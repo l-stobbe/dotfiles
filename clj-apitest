@@ -1,0 +1,65 @@
+(ns reddit-api-test.core
+  (:require [clj-http.client :as client]
+            [cheshire.core :as json]))
+
+;; Replace these with your app's credentials and Reddit account details
+(def client-id "YOUR_CLIENT_ID")
+(def client-secret "YOUR_CLIENT_SECRET")
+(def username "YOUR_REDDIT_USERNAME")
+(def password "YOUR_REDDIT_PASSWORD")
+
+;; Step 1: Get an access token
+(defn get-access-token []
+  (let [response (client/post "https://www.reddit.com/api/v1/access_token"
+                              {:basic-auth [client-id client-secret]
+                               :form-params {:grant_type "password"
+                                             :username username
+                                             :password password}
+                               :content-type :json
+                               :accept :json
+                               :throw-exceptions false})]
+    (if (= 200 (:status response))
+      (:access_token (json/parse-string (:body response) true))
+      (println "Failed to get access token:" (:body response)))))
+
+;; Step 2: Test authentication and authorization
+(defn test-auth [token]
+  ;; Test weak authentication
+  (let [unauth-response (client/get "https://oauth.reddit.com/api/v1/me"
+                                    {:throw-exceptions false})]
+    (when (= 200 (:status unauth-response))
+      (println "Vulnerability: Endpoint accessible without authentication")))
+
+  ;; Test IDOR
+  (let [idor-response (client/get "https://oauth.reddit.com/api/v1/user/OTHER_USER_ID"
+                                  {:headers {"Authorization" (str "Bearer " token)}
+                                   :throw-exceptions false})]
+    (when (= 200 (:status idor-response))
+      (println "Vulnerability: IDOR detected")))
+
+  ;; Test token expiry
+  (let [expired-response (client/get "https://oauth.reddit.com/api/v1/me"
+                                     {:headers {"Authorization" (str "Bearer " "EXPIRED_TOKEN")}
+                                      :throw-exceptions false})]
+    (when (not= 401 (:status expired-response))
+      (println "Vulnerability: Expired token still works"))))
+
+;; Step 3: Fetch user info (example of using the token)
+(defn get-user-info [token]
+  (let [response (client/get "https://oauth.reddit.com/api/v1/me"
+                             {:headers {"Authorization" (str "Bearer " token)}
+                              :throw-exceptions false})]
+    (if (= 200 (:status response))
+      (println "User Info:" (:body response))
+      (println "Failed to fetch user info:" (:body response)))))
+
+;; Main execution
+(defn -main []
+  (let [token (get-access-token)]
+    (when token
+      (println "Access Token Obtained")
+      (test-auth token)
+      (get-user-info token))))
+
+;; Run the script
+(-main)
