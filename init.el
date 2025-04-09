@@ -40,8 +40,7 @@
 (elpy-enable)
 (use-package doom-themes)
 
-(use-package doom-modeline)
-(doom-modeline-mode 1)
+
 (use-package helpful)
 (use-package which-key)
 (which-key-mode)
@@ -154,5 +153,3 @@
  ;; If there is more than one, they won't work right.
  )
 
-
-(desktop-read)
