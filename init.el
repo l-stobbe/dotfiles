@@ -4,30 +4,21 @@
 ;; Emacs configuration with
 ;; - Modern completion: Vertico + Corfu + Orderless + Prescient + Cape
 ;; - Useful UI and behavior tweaks
-;; - Forth mode integration
 
 ;;; Code:
+(use-package bqn-mode
+  :ensure t
+  :mode "\\.bqn\\'"
+  :hook (bqn-mode . bqn-electric-indent-mode))
 
+(use-package haskell-mode)
+(use-package sweeprolog)
+(use-package magit)
 ;; ------------------------
-;; Load paths for local elisp & Gforth
+;; Load paths for local elisp
 ;; ------------------------
 (add-to-list 'load-path "~/.emacs.d/lisp/")
-(add-to-list 'load-path "/home/geist/.nix-profile/bin/gforth")
 
-;; ------------------------
-;; Forth mode setup
-;; ------------------------
-(autoload 'forth-mode "gforth.el")
-(add-to-list 'auto-mode-alist '("\\.fs\\'" . forth-mode))
-
-(autoload 'forth-block-mode "gforth.el")
-(add-to-list 'auto-mode-alist '("\\.fb\\'" . forth-block-mode))
-
-(add-hook 'forth-mode-hook
-          (lambda ()
-            (setq forth-indent-level 4
-                  forth-minor-indent-level 2
-                  forth-hilight-level 3)))
 
 ;; ------------------------
 ;; Basic Emacs Settings
@@ -56,6 +47,7 @@
 (require 'package)
 (setq package-archives
       '(("gnu"   . "https://elpa.gnu.org/packages/")
+				("nongnu" . "https://elpa.nongnu.org/nongnu/")
         ("melpa" . "https://melpa.org/packages/")))
 
 (package-initialize)
@@ -101,6 +93,7 @@
 (use-package corfu
   :custom
   (corfu-auto t)
+  (corfu-auto-delay 0.05)
   (corfu-cycle t)
   (corfu-preview-current nil)
   (corfu-quit-no-match 'separator)
@@ -150,7 +143,7 @@
 (global-set-key (kbd "C-SPC") #'completion-at-point)
 
 ;; Load preferred theme
-(load-theme 'ef-trio-light t)
+(load-theme 'ef-dream t)
 
 ;; ------------------------
 ;; Startup message
@@ -159,3 +152,25 @@
 
 (provide 'init)
 ;;; init.el ends here
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(custom-safe-themes
+   '("59c36051a521e3ea68dc530ded1c7be169cd19e8873b7994bfc02a216041bf3b"
+     "36c5acdaf85dda0dad1dd3ad643aacd478fb967960ee1f83981d160c52b3c8ac"
+     default))
+ '(j-console-cmd "jconsole")
+ '(package-selected-packages
+   '(bqn-mode cape cider corfu-prescient ef-themes elixir-mode
+              embark-consult erlang forth-mode general haskell-mode
+              j-mode kind-icon magit marginalia orderless relint sly
+              sweeprolog uiua-mode vertico-prescient vterm which-key)))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
+
