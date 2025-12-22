@@ -1,10 +1,11 @@
 ;;; init.el --- Modern Emacs setup focused on completion and comfort -*- lexical-binding: t; -*-
-
+(add-to-list 'auto-mode-alist '("\\.pl\\'" . prolog-mode))
 ;;; Commentary:
 ;; Emacs configuration with
 ;; - Modern completion: Vertico + Corfu + Orderless + Prescient + Cape
 ;; - Useful UI and behavior tweaks
-
+(use-package ef-themes)
+(use-package doom-themes)
 ;;; Code:
 (use-package bqn-mode
   :ensure t
@@ -143,7 +144,7 @@
 (global-set-key (kbd "C-SPC") #'completion-at-point)
 
 ;; Load preferred theme
-(load-theme 'ef-dream t)
+(load-theme 'doom-one t)
 
 ;; ------------------------
 ;; Startup message
@@ -173,4 +174,3 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
-
