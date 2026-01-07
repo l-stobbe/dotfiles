@@ -1,3 +1,45 @@
+(use-package forth-mode)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; (autoload 'forth-mode "gforth.el")														  ;;
+;; (setq auto-mode-alist (cons '("\\.fs\\'" . forth-mode) 			  ;;
+;; 			    auto-mode-alist))																		  ;;
+;; (autoload 'forth-block-mode "gforth.el")											  ;;
+;; (setq auto-mode-alist (cons '("\\.fb\\'" . forth-block-mode)   ;;
+;; 			    auto-mode-alist))																		  ;;
+;; (add-hook 'forth-mode-hook (function (lambda ()							  ;;
+;;    ;; customize variables here:															  ;;
+;;    (setq forth-indent-level 4)																  ;;
+;;    (setq forth-minor-indent-level 2)													  ;;
+;;    (setq forth-hilight-level 3)															  ;;
+;;    ;;; ...																										  ;;
+;; )))																													  ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+;;; tools for bug bounty workflow
+
+(use-package verb)
+(use-package org
+  :mode ("\\.org\\'" . org-mode)
+  :config (define-key org-mode-map (kbd "C-c C-r") verb-command-map))
+(use-package json-mode)
+(use-package jwt)
+(use-package ox-json)
+(use-package swagg)
+(use-package whois)
+(use-package elpy)
+(use-package vterm)
+
+(use-package clojure-mode)
+(use-package cider)
+(use-package arxiv-mode)
+(use-package compiler-explorer)
+(use-package easy-hugo)
+(use-package elfeed-org)
+(use-package elfeed-dashboard)
+(use-package org-journal)
+(use-package org-pdftools)
 ;;; init.el --- Modern Emacs setup focused on completion and comfort -*- lexical-binding: t; -*-
 (add-to-list 'auto-mode-alist '("\\.pl\\'" . prolog-mode))
 ;;; Commentary:
@@ -159,15 +201,25 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
-   '("59c36051a521e3ea68dc530ded1c7be169cd19e8873b7994bfc02a216041bf3b"
-     "36c5acdaf85dda0dad1dd3ad643aacd478fb967960ee1f83981d160c52b3c8ac"
-     default))
+	 '("0325a6b5eea7e5febae709dab35ec8648908af12cf2d2b569bedc8da0a3a81c1"
+		 "df46394d55355a6786362d2709228ec092e2e0c6b13e0720344ad1878646b56c"
+		 "f76876670af99c2ca9eedecc9bb7559166726800fa9774d9e9630293354f25a4"
+		 "a30f82e801b5db48a3c8a5bd68c249e3c5aa21dd3d2a1f0ce613eeb7276bbe66"
+		 "117f7dfb273bb39b83a228018ccffeb85ba0983c5d4a63155a5a48ad7f7c7c86"
+		 "2896501d2809d956f0b4fa5442f416cb3e62c82da0ef7ccbef538c67872d1967"
+		 "59c36051a521e3ea68dc530ded1c7be169cd19e8873b7994bfc02a216041bf3b"
+		 "36c5acdaf85dda0dad1dd3ad643aacd478fb967960ee1f83981d160c52b3c8ac"
+		 default))
  '(j-console-cmd "jconsole")
  '(package-selected-packages
-   '(bqn-mode cape cider corfu-prescient ef-themes elixir-mode
-              embark-consult erlang forth-mode general haskell-mode
-              j-mode kind-icon magit marginalia orderless relint sly
-              sweeprolog uiua-mode vertico-prescient vterm which-key)))
+	 '(arxiv-mode bqn-mode cape cider clojure-mode compiler-explorer
+								corfu-prescient easy-hugo ef-themes elfeed-dashboard
+								elfeed-org elixir-mode elpy embark-consult erlang
+								flymake-guile forth-mode geiser-guile general guix
+								haskell-mode j-mode json-mode jwt kind-icon magit
+								marginalia orderless org-journal org-pdftools ox-json
+								relint sly swagg sweeprolog uiua-mode verb
+								vertico-prescient vterm which-key whois)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
